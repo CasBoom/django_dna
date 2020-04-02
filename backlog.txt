@@ -1,0 +1,13 @@
+Raw DNA toevoegen
+DNA toevoegen met een bestand in FASTA formaat
+DNA valideren (mag alleen bestaan uit ACGT)
+nucleobase tellen
+GC percentage opnemen
+Reverse complement DNA weergeven (optioneel)
+DNA naar RNA converten (optioneel)
+point mutations van 2 DNA modellen vergelijken (optioneel)
+
+Een mainpage met een overzicht van alle DNA modellen
+Een pagina om DNA aan de database toe te voegen
+Een detailpagina waar je de alle DNA data kan zien (gevisualiseerd in grafieken)
+Een pagina met alle DNA modellen in FASTA formaat (of een downloadbaar .fas bestand)

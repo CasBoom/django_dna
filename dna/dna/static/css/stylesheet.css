@@ -1,11 +1,13 @@
 body{
     margin:0;
     font-family:arial;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 .container{
-    width:960px;
+    max-width:960px;
+    width:Math(100% - 30px);
+    word-break: break-all;
     margin:auto;
     padding:15px;
 }

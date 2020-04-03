@@ -2,12 +2,31 @@
 
 {% block content %}
 <h1>Details</h1>
-<br>
-    <h2>Name: {{ profile.title }}</h2>
-    <h3>Nucleobase count</h3>
-    <b>Adenosine: </b>{{ profile.count_nucleobases.0 }}<br>
-    <b>Cytosine: </b>{{ profile.count_nucleobases.1 }}<br>
-    <b>Guanine: </b>{{ profile.count_nucleobases.2 }}<br>
-    <b>Thymine: </b>{{ profile.count_nucleobases.3 }}
-    <img src="data:image/png;base64,{{graphic|safe}}">
+    <h2 class="detail_header">Name: {{ profile.title }}</h2>
+    <div class="detail_wrapper">
+        <section class="half_field">
+            <h3>Nucleobase count</h3>
+            {{profile.df_nucleobase_count|safe}}
+        </section>
+
+        <section class="half_field gc">
+            <h3>GC Content</h3>
+            <h4>{{profile.find_gc}}%</h4>
+        </section>
+
+        <section class="field">
+            <h3>Raw DNA</h3>
+            {{profile.dna}}
+        </section>
+        
+        <section class="field">
+            <h3>Reverse Compliment</h3>
+            {{profile.reverse_compliment}}
+        </section>
+
+        <section class="field">
+            <h3>RNA variant</h3>
+            {{profile.find_rna}}
+        </section>
+    </div>
 {% endblock %}

@@ -4,9 +4,13 @@ body{
     box-sizing: content-box;
 }
 
+h2{
+    text-align:center;
+}
+
 .container{
     max-width:960px;
-    width:Math(100% - 30px);
+    width:calc(100% - 30px);
     word-break: break-all;
     margin:auto;
     padding:15px;
@@ -19,9 +23,46 @@ a{
     margin:25px;
 }
 
+.detail_header{
+    background-color:#229922;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color:#fff;
+    font-weight: bold;
+    padding:15px;
+}
+
+.detail_wrapper{
+    margin:auto;
+    width:100%;
+}
+
+.half_field{
+    width:calc(50% - 42px);
+    float:left;
+    margin:5px;
+    border: 1px solid #c9c9c9;
+    padding:15px;
+}
+
+.field{
+    width:calc(100% - 42px);
+    display:inline-block;
+    margin:5px;
+    border: 1px solid #c9c9c9;
+    padding:15px;
+}
+
+h4{
+    margin-top:10px;
+    font-size:50px;
+}
+
 header{
     width:100%;
     height:100px;
+    border-bottom: 1px solid #c9c9c9;
+
 }
 
 header a{
@@ -30,9 +71,15 @@ header a{
     width:75px;
     border-radius:15px;
     background-color:#229922;
-    float:left;
     color:#fff;
     font-weight: bold;
+    float:left;
     margin-top:25px;
     margin-left:25px;
+}
+
+main a {
+    border: 1px solid #c9c9c9;
+    border-radius: 15px;
+    padding:15px;
 }

@@ -31,10 +31,11 @@ class dna_profile(models.Model):
 
 
     def df_nucleobase_count(self):
-        data = {'nucleobase':['Adenine','Cytosine','Guanine','Thymine'],
-                'frequency':count_nucleobases(self)}
-        df = pd.DataFrame(data)
-        return df.plot.bar(x="Nucleobase", y="Frequency", rot=70, title="Nucleobase count")
+        data = {'Nucleobase':['Adenine','Cytosine','Guanine','Thymine'],
+                'Frequency':self.count_nucleobases()}
+        df = pd.DataFrame(data).to_html()
+        return df
+        # return df.plot.bar(x="Nucleobase", y="Frequency", rot=70, title="Nucleobase count")
 
     def find_gc(self):
         total_amount = 0
@@ -46,7 +47,7 @@ class dna_profile(models.Model):
                 total_amount+=1
                 if (nucleobase == 'G') or (nucleobase == 'C'):
                     gc_count += 1
-            return (gc_count / total_amount)*100
+            return np.round((gc_count / total_amount)*100, 6)
 
     def count_point_mutations(self, other_dna):
         m = 0
@@ -59,6 +60,28 @@ class dna_profile(models.Model):
                 if self.dna[i] != other_dna[i]:
                     m+=1
         return m
+
+    def reverse_compliment(self):
+        output = ""
+        for nucleobase in self.dna:
+            if nucleobase == "A":
+                output = "T" + output
+            elif nucleobase == "T":
+                output = "A" + output
+            elif nucleobase == "G":
+                output = "C" + output
+            elif nucleobase == "C":
+                output = "G" + output
+        return output
+
+    def find_rna(self):
+        rna = ""
+        for letter in self.dna:
+            if letter == "T":
+                rna = rna + "U"
+            else:
+                rna = rna + letter
+        return rna
 
     def __str__(self):
         return self.title

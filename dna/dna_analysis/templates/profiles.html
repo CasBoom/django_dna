@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<h1> Profiles </h1>
+{% for profiles in profiles.all %}
+<a href="/dna/{{profiles.id}}">
+    <h2>{{ profiles.title }}</h2>
+    <p><b>Nucleobase count:</b><br>
+        <b>A: </b>{{ profiles.count_nucleobases.0 }},
+        <b>C: </b>{{ profiles.count_nucleobases.1 }},
+        <b>G: </b>{{ profiles.count_nucleobases.2 }},
+        <b>T: </b>{{ profiles.count_nucleobases.3 }}
+    <p><b>GC percentage:</b><br>
+        <b>Per: </b>{{ profiles.find_gc }}%
+    </p>
+</a>
+{% endfor %}
+{% endblock %}

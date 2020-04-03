@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+
+{% block content %}
+Details
+<br>
+    <h2>{{ profile.title }}</h2>
+    <h3>Nucleobase count</h3>
+    <b>Adenosine: </b>{{ profile.count_nucleobases.0 }}<br>
+    <b>Cytosine: </b>{{ profile.count_nucleobases.1 }}<br>
+    <b>Guanine: </b>{{ profile.count_nucleobases.2 }}<br>
+    <b>Thymine: </b>{{ profile.count_nucleobases.3 }}
+    <img src="data:image/png;base64,{{graphic|safe}}">
+{% endblock %}

@@ -39,7 +39,7 @@ class dna_profile(models.Model):
     def find_gc(self):
         total_amount = 0
         gc_count = 0
-        if(self.size<=0):
+        if(len(self.dna) <= 0):
             return 100
         else:
             for nucleobase in self.dna:

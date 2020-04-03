@@ -24,4 +24,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', dna_analysis.views.home , name='home'),
     path('dna/', include('dna_analysis.urls')),
+    path('fasta/', dna_analysis.views.fasta),
 ]

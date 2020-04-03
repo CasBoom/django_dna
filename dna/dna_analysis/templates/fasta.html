@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+
+{% block content %}
+{% for profiles in profiles.all %}
+
+>{{ profiles.title }}
+{{ profiles.dna }}
+
+{% endfor %}
+{% endblock %}

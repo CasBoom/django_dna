@@ -1,0 +1,36 @@
+body{
+    margin:0;
+    font-family:arial;
+    box-sizing: border-box;
+}
+
+.container{
+    width:960px;
+    margin:auto;
+    padding:15px;
+}
+
+a{
+    text-decoration: none;
+    color:#000;
+    display:inline-block;
+    margin:25px;
+}
+
+header{
+    width:100%;
+    height:100px;
+}
+
+header a{
+    text-align:center;
+    padding:15px;
+    width:75px;
+    border-radius:15px;
+    background-color:#229922;
+    float:left;
+    color:#fff;
+    font-weight: bold;
+    margin-top:25px;
+    margin-left:25px;
+}

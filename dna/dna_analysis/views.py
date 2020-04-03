@@ -9,3 +9,7 @@ def home(request):
 def detail(request, profile_id):
     profile = get_object_or_404(dna_profile, pk = profile_id)
     return render(request, 'detail.html', {'profile':profile})
+
+def fasta(request):
+    profiles = dna_profile.objects
+    return render(request, 'fasta.html', {'profiles':profiles})

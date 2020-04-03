@@ -1,14 +1,24 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang='en' dir='ltr'>
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet"  href="{% static './css/stylesheet.css' %}">
     <title>DNA analysis</title>
 </head>
 <body>
-    <main>
-        {% block content %}
+    
+    <header>
+        <a href="/">Overview</a>
+        <a href="/fasta">FASTA</a>
+        <a href="/upload">Upload</a>
+    </header>
+    <div class="container">
+        <main>
+            {% block content %}
 
-        {% endblock %}
-    </main>
+            {% endblock %}
+        </main>
+    </div>
 </body>
 </html>

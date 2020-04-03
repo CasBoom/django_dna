@@ -1,9 +1,9 @@
 {% extends 'index.html' %}
 
 {% block content %}
-Details
+<h1>Details</h1>
 <br>
-    <h2>{{ profile.title }}</h2>
+    <h2>Name: {{ profile.title }}</h2>
     <h3>Nucleobase count</h3>
     <b>Adenosine: </b>{{ profile.count_nucleobases.0 }}<br>
     <b>Cytosine: </b>{{ profile.count_nucleobases.1 }}<br>

@@ -25,4 +25,9 @@ urlpatterns = [
     path('', dna_analysis.views.home , name='home'),
     path('dna/', include('dna_analysis.urls')),
     path('fasta/', dna_analysis.views.fasta),
+    path('upload/', dna_analysis.views.upload),
+
+    # path('upload/', include('dna_analysis.urls')),
+    # path('upload/create_raw', dna_analysis.views.upload),
+    # path('upload/create_raw', dna_analysis.views.upload),
 ]

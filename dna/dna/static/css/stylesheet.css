@@ -4,6 +4,11 @@ body{
     box-sizing: content-box;
 }
 
+.dna_input{
+    width:50%;
+    height:250px;
+}
+
 h2{
     text-align:center;
 }

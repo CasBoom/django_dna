@@ -27,9 +27,9 @@ def upload(request):
     return render(request, 'upload.html', {'profiles':profiles})
 
 def create(title, dna):
-    for nucleobase in dna:
-        if nucleobase != 'A' and nucleobase != 'C' and nucleobase != 'G' and nucleobase != 'T' and nucleobase != 'N':
-            return False
+    # for nucleobase in dna:
+    #     if nucleobase != 'A' and nucleobase != 'C' and nucleobase != 'G' and nucleobase != 'T' and nucleobase != 'N':
+    #         return False
     profile = dna_profile()
     profile.title = title
     profile.dna = dna

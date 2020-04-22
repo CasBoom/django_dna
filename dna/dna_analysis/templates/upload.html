@@ -2,6 +2,9 @@
 
 {% block content %}
 <h1>Upload</h1>
+    <span class="error">
+        {{ error }}
+    </span>
     <h3>Raw</h3>
     <form action="" method="POST">
         {% csrf_token %}

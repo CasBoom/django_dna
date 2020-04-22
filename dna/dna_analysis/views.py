@@ -19,22 +19,28 @@ def upload(request):
     if request.method=='POST':
         if request.POST['type'] == 'raw':
             if request.POST['title'] and request.POST['dna']:
-                create(request.POST['title'], request.POST['dna'])
+                success = create(request.POST['title'], request.POST['dna'])
+                if success != 1:
+                    return render(request, 'upload.html', {'error':success})  
         elif request.POST['type'] == 'file':
             if request.POST['file']:
                 fasta_to_model(request.POST['file'])
 
     return render(request, 'upload.html', {'profiles':profiles})
 
-def create(title, dna):
-    # for nucleobase in dna:
-    #     if nucleobase != 'A' and nucleobase != 'C' and nucleobase != 'G' and nucleobase != 'T' and nucleobase != 'N':
-    #         return False
+def create(title, dirty_dna):
+    dna=""
+    dna_lines = dirty_dna.splitlines()
+    for line in dna_lines:
+        dna += line.strip()
+    for nucleobase in dna:
+        if nucleobase != 'A' and nucleobase != 'C' and nucleobase != 'G' and nucleobase != 'T' and nucleobase != 'N':
+            return "Error invalid character \"" + nucleobase + "\" found in string!"
     profile = dna_profile()
     profile.title = title
     profile.dna = dna
     profile.save()
-    return True
+    return 1
 
 def fasta_to_model(file):
     title = ""

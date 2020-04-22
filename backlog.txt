@@ -1,11 +1,13 @@
-Een pagina om DNA aan de database toe te voegen 
-
-Raw DNA toevoegen
-DNA toevoegen met een bestand in FASTA formaat
-DNA valideren (mag alleen bestaan uit ACGT)
 point mutations van 2 DNA modellen vergelijken (optioneel)
+DNA toevoegen met een bestand in FASTA formaat (optioneel)
+
+Een pagina om DNA aan de database toe te voegen (DONE)
+Raw DNA toevoegen (DONE)
+DNA valideren (mag alleen bestaan uit ACGT en N) (DONE)
+
 
 Een detailpagina waar je de alle DNA data kan zien (DONE))
+
 Een mainpage met een overzicht van alle DNA modellen (DONE)
 Een pagina met alle DNA modellen in FASTA formaat (DONE)
 nucleobase tellen (DONE)

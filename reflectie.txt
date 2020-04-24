@@ -1,0 +1,19 @@
+Hoe ging het maken?
+    Het bouwen van de website ging in eerste instantie moeizaam omdat ik nog niet zo veel van Django af wist. 
+    De tutorial die ik vanuit school had meegekregen gaf weinig inhoudelijke informatie mee wat het moeilijk maakte om te starten.
+
+    Nadat ik meer tijd had besteed aan Django ging het een stuk minder moeizaam. 
+    Het maken van de pagina's en het toevoegen van functies ging vrij makkelijk.
+
+ wat ging goed? 
+    Nieuwe functies aan de DNA profiel class toevoegen ging vrij makkelijk.
+    Het bedenken van hoe functies zouden moeten werken op basis van informatie van rosalind.info ging mij ook erg goed af.
+
+ wat kon beter?
+    Het opstarten van de site ging moeizaam, maar dat is uiteindelijk goed gekomen.
+    Het toepassen van de Pandas library ging was moeilijker dan verwacht. 
+    Dit kwam omdat er weinig informatie te vinden was over hoe je Pandas in een site kan verwerken.
+
+ wat heb je geleerd?
+    Ik heb veel geleerd over bioinformatica en ben nu bekend met een aantal functies gerelateerd aan bioinformatica,
+    daarnaast heb ik ook veel kennis opgedaan over het opzetten en toepassen van Django.
